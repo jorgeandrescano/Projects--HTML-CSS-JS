@@ -16,6 +16,7 @@ class Calculator {
   }
 
   addNumber(number) {
+    if (number === "." && this.botValue.includes(".")) return;
     this.botValue = this.botValue + number;
     //this.topValue = 0
   }
@@ -36,33 +37,41 @@ class Calculator {
     this.botValue = "";
   }
   makeCalculation() {
-    let result;
+    let result
     let convertTopValue = parseFloat(this.topValue);
     let convertBotValue = parseFloat(this.botValue);
-
+    if (isNaN(convertTopValue) || isNaN(convertBotValue)) return;
     switch (this.operator) {
       case "+":
-        result = convertTopValue + convertBotValue;
+        result = convertTopValue + convertBotValue
         break;
       case "-":
-        result = convertTopValue - convertBotValue;
+        result = convertTopValue - convertBotValue
         break;
-      case "&times":
-        result = convertTopValue * convertBotValue;
+      case "x":
+        result = convertTopValue * convertBotValue
         break;
-      case "&divide":
-        result = convertTopValue / convertBotValue;
-        convertBotValue != 0 ? result : "Error Zero Division";
+      case "÷":
+        if(convertBotValue === 0) {
+          result = "Error... NaN"
+        } else{
+          result = convertTopValue / convertBotValue
+        }
         break;
       case "%":
-        result = convertTopValue * (convertBotValue / 100);
+        result = (convertTopValue * convertBotValue) / 100
         break;
       default:
         return;
     }
-    this.botValue = result
-    this.operator = undefined
-    this.topValue = ''
+    this.botValue = result;
+    this.operator = undefined;
+    this.topValue = "";
+  }
+  cleanScreen() {
+    this.botValue = '';
+    this.topValue = '';
+    this.operator = undefined;
   }
 }
 
@@ -85,4 +94,14 @@ operatorBtn.forEach((btn) => {
     calculator.selectOperation(btn.innerText);
     calculator.printDisplay();
   });
+});
+
+equalBtn.addEventListener("click", () => {
+  calculator.makeCalculation();
+  calculator.printDisplay();
+});
+
+resetBtn.addEventListener("click", () => {
+  calculator.cleanScreen();
+  calculator.printDisplay();
 });
