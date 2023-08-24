@@ -12,7 +12,7 @@ class Calculator {
     this.topValueText = topValueText;
     this.botValue = "";
     this.topValue = "";
-    this.operator = undefined;
+    this.operator = "";
   }
 
   addNumber(number) {
@@ -22,7 +22,7 @@ class Calculator {
   }
   printDisplay() {
     this.botValueText.innerText = this.botValue;
-    this.topValueText.innerText = this.topValue;
+    this.topValueText.innerText = this.topValue + this.operator;
   }
   clearEl() {
     this.botValue = this.botValue.slice(0, -1);
@@ -37,41 +37,41 @@ class Calculator {
     this.botValue = "";
   }
   makeCalculation() {
-    let result
+    let result;
     let convertTopValue = parseFloat(this.topValue);
     let convertBotValue = parseFloat(this.botValue);
     if (isNaN(convertTopValue) || isNaN(convertBotValue)) return;
     switch (this.operator) {
       case "+":
-        result = convertTopValue + convertBotValue
+        result = convertTopValue + convertBotValue;
         break;
       case "-":
-        result = convertTopValue - convertBotValue
+        result = convertTopValue - convertBotValue;
         break;
       case "x":
-        result = convertTopValue * convertBotValue
+        result = convertTopValue * convertBotValue;
         break;
       case "÷":
-        if(convertBotValue === 0) {
-          result = "Error... NaN"
-        } else{
-          result = convertTopValue / convertBotValue
+        if (convertBotValue === 0) {
+          result = "Error... NaN";
+        } else {
+          result = convertTopValue / convertBotValue;
         }
         break;
       case "%":
-        result = (convertTopValue * convertBotValue) / 100
+        result = (convertTopValue * convertBotValue) / 100;
         break;
       default:
         return;
     }
     this.botValue = result;
-    this.operator = undefined;
+    this.operator = "";
     this.topValue = "";
   }
   cleanScreen() {
-    this.botValue = '';
-    this.topValue = '';
-    this.operator = undefined;
+    this.botValue = "";
+    this.topValue = "";
+    this.operator = "";
   }
 }
 
