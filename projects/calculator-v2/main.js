@@ -18,7 +18,6 @@ class Calculator {
   addNumber(number) {
     if (number === "." && this.botValue.includes(".")) return;
     this.botValue = this.botValue + number;
-    //this.topValue = 0
   }
   printDisplay() {
     this.botValueText.innerText = this.botValue;

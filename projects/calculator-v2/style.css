@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
 * {
   margin: 0;
@@ -29,22 +29,24 @@ body {
 
 .display {
   grid-column: 1 / -1;
+  height: 85px;
   background-color: hsl(190, 20%, 88%);
   color: black;
   border-radius: 0.2rem;
-  padding: 1rem;
+  padding: 0.8rem;
   margin-bottom: 1.2rem;
   text-align: end;
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
 }
 
 .top-value {
   font-size: 0.9rem;
-  margin-bottom: 0.6rem ;
+  margin-bottom: 0.6rem;
 }
 
 .bottom-value {
   font-size: 1.6rem;
+  margin-top: 2rem;
 }
 
 button {
@@ -72,7 +74,7 @@ button.clear {
 }
 
 button.clear:hover {
-  background-color: hsl(5, 85%, 25%)
+  background-color: hsl(5, 85%, 25%);
 }
 
 #plus {
