@@ -11,38 +11,38 @@
 <body>
     <div class="container">
         <section>
-            <div class="lbl">Your Bill</div>
+            <div class="lbl" for="bill">Your Bill</div>
             <div class="input-box">
                 <span>$</span>
-                <input id="bill" class="val" value="0.00">
+                <input id="bill" class="val" type="number" value="0.00">
             </div>
             <hr>
         </section>
         <section>
             <div class="wrapper">
                 <label class="lbl" for="tip">Tip percentage</label>
-                <span id="tip-percent" class="val">00%</span>
+                <span id="tip-percent" class="val"></span>
             </div>
-            <input type="range" min="1" id="tip" value="15">
+            <input id="tip" type="range" min="1" value="15">
             <div class="wrapper">
                 <span class="lbl">Tip</span>
-                <span class="val">$ 8.4</span>
+                <span id="tip-amount" class="val"></span>
             </div>
             <div class="wrapper">
                 <span class="lbl">Total Amount</span>
-                <span class="val highlight">$ 200.50</span>
+                <span id="total-amount" class="val highlight">$ 200.50</span>
             </div>
             <hr>
             <div class="wrapper">
                 <label class="lbl" for="people">N° of people paying</label>
-                <span id="split-num" class="val">2</span>
+                <span id="split-num" class="val"></span>
             </div>
             <input id="people" type="range" min="1" max="10" value="1">
         </section>
         <section>
             <div class="total">
-                <div class="lbl">Total per person (including tip)</div>
-                <div class="val">$ 000.00</div>
+                <span class="lbl">Total per person (including tip)</span>
+                <span id="total-per-person" class="val"></span>
             </div>
         </section>
     </div>
