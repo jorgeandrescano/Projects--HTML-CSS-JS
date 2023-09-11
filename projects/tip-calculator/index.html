@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="container">
-    <section>
-        <div>Your Bill</div>
-        <div class="input-box"></div>
-        <span>$</span>
-        <input type="number" value="0.00" id="bill" class="val">
-        <hr>
-    </section>
-    <section>
-        <div class="wrapper">
-            <label for="tip">Tip Percentage</label>
-            <span>00%</span>
+    <div class="container">
+        <section>
+            <div class="lbl">Your Bill</div>
+            <div class="input-box">
+                <span>$</span>
+                <input id="bill" class="val" value="0.00">
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="wrapper">
+                <label class="lbl" for="tip">Tip percentage</label>
+                <span id="tip-percent" class="val">00%</span>
+            </div>
             <input type="range" min="1" id="tip" value="15">
-        </div>
-        <div class="wrapper">
-            <span>Tip</span>
-            <span>$ 8.4</span>
-        </div>
-        <div class="wrapper">
-            <span>Total Amount</span>
-            <span>$ 8.4</span>
-        </div>
-        <hr>
-        <div class="wrapper">
-        <label for="tip">N° of people paying</label>
-            <span>2</span>
-            <input type="range" min="1" id="tip" value="15">
-        </div>
-    </section>
-    <section>
-        <div class="total">
-            <div>Total per person</div>
-            <div>$ 000.00</div>
-        </div>
-    </section>
-</div>
+            <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span class="val">$ 8.4</span>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span class="val highlight">$ 200.50</span>
+            </div>
+            <hr>
+            <div class="wrapper">
+                <label class="lbl" for="people">N° of people paying</label>
+                <span id="split-num" class="val">2</span>
+            </div>
+            <input id="people" type="range" min="1" max="10" value="1">
+        </section>
+        <section>
+            <div class="total">
+                <div class="lbl">Total per person (including tip)</div>
+                <div class="val">$ 000.00</div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
