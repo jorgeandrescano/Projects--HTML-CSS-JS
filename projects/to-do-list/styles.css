@@ -23,13 +23,13 @@ body {
     margin: auto;
     left: 0;
     right: 0;
-    top: 30px;
+    top: 50px;
     padding: 30px 40px;
 }
 
 .newtask {
   position: relative;
-  background-color: rgb(230, 234, 238);
+  background-color: #fafafa;
   padding: 30px 20px;
   border-radius: 5px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -50,7 +50,7 @@ body {
 
 .newtask input:focus {
   outline: none;
-  border-color: #8052ec;
+  border-color: #064f60;
 }
 
 .newtask button {
@@ -62,15 +62,15 @@ body {
   font-family: 'Roboto',sans-serif;
   font-weight: 500;
   font-size: 16px;
-  background-color: #8052ec;
+  background-color: #ffad47;
   border: none;
-  color: aliceblue;
+  color: #fafafa;
   cursor: pointer;
   outline: none;
 }
 
 #tasks {
-  background-color: rgb(230, 234, 238);
+  background-color: #fafafa;
   padding: 30px 20px;
   margin-top: 60px;
   border-radius: 10px;
@@ -80,26 +80,25 @@ body {
 }
 
 .task {
-  background-color: aliceblue;
   height: 50px;
   padding: 5px 10px;
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #d1d3d4;
+  border-bottom: 2px solid #064f60;
   cursor: pointer;
 }
 
 .task span {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 .task button {
-  background-color: #8052ec;
-  color: #d1d3d4;
+  background-color: #ffad47;
+  color: #fafafa;
   height: 100%;
   width: 40px;
   border-radius: 5px;
@@ -109,5 +108,6 @@ body {
 }
 
 .completed {
-  text-decoration: line-through;
+  color: #ffad47;
+  text-decoration: line-through #ffad47 2px;
 }
